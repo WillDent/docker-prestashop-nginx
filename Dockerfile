@@ -48,7 +48,7 @@ RUN rm -rf /usr/share/nginx/www
 RUN mv /usr/share/nginx/prestashop /usr/share/nginx/www
 RUN chown -R www-data:www-data /usr/share/nginx/www
 
-# Wordpress Initialization and Startup Script
+# Prestashop Initialization and Startup Script
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
