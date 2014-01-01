@@ -16,8 +16,8 @@ if [ ! -f /usr/share/nginx/www/install/install_cli.php ]; then
 
   mysqladmin -u root password $MYSQL_PASSWORD 
   mysql -uroot -p$MYSQL_PASSWORD -e "CREATE DATABASE prestashop; GRANT ALL PRIVILEGES ON prestashop.* TO 'prestashop'@'localhost' IDENTIFIED BY '$PRESTASHOP_PASSWORD'; FLUSH PRIVILEGES;"
-  #php /usr/share/nginx/www/install/install_cli.php --domain=localhost --db_server=localhost --db_name=$PRESTASHOP_DB --db_user=prestashop --db_password=$PRESTASHOP_PASSWORD
-  #sleep 10s
+  php /usr/share/nginx/www/install/index_cli.php --domain=localhost --db_server=localhost --db_name=$PRESTASHOP_DB --db_user=prestashop --db_password=$PRESTASHOP_PASSWORD
+  sleep 10s
   killall mysqld
 fi
 
